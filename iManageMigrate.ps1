@@ -3,7 +3,7 @@ $logDir = "C:\Logs\Imanager"
 $logFile = "$logDir\migrateImanager.txt"
 
 if (-not (Test-Path -Path $logDir)) {
-    Write-Host "Criando diretório de logs: $logDir"
+    Write-Host "Criando diretÃ³rio de logs: $logDir"
     New-Item -Path $logDir -ItemType Directory -Force
 }
 
@@ -31,7 +31,7 @@ New-Item -Path "$env:APPDATA\iManage\Work\Configs" -ItemType Directory -Force
 New-Item -Path "$env:APPDATA\iManage\Work\Configs\user" -ItemType Directory -Force
 Write-Log "Novos items Criados."
 
-# copiar arquivo de configuração
+# copiar arquivo de configuraÃ§Ã£o
 Copy-Item -Path "$(Get-Location)\cloud.config" "$env:APPDATA\iManage\Work\Configs\user\iManWork.config" -Force
 Write-Host "Arquivo cloud.config movido e renomeado para iManWork.config."
 
