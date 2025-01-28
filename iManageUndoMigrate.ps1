@@ -3,7 +3,7 @@ $logDir = "C:\Logs\Imanager"
 $logFile = "$logDir\undoMigrateImanager.txt"
 
 if (-not (Test-Path -Path $logDir)) {
-    Write-Host "Criando diretório de logs: $logDir"
+    Write-Host "Criando diretÃ³rio de logs: $logDir"
     New-Item -Path $logDir -ItemType Directory -Force
 }
 
@@ -25,7 +25,7 @@ Write-Log "Arquivos antigos removidos."
 
 Remove-Item "$env:APPDATA\iManage\Work\Configs\user" -Recurse -Force -ErrorAction SilentlyContinue
 
-# Cria o diretório 'user' em Configs, se não existir
+# Cria o diretÃ³rio 'user' em Configs, se nÃ£o existir
 $workConfigDir = "$env:USERPROFILE\AppData\Roaming\iManage\Work\Configs\user"
 If (-not (Test-Path -Path $workConfigDir)) {
     New-Item -Path $workConfigDir -ItemType Directory -Force
@@ -45,4 +45,4 @@ Write-Log "Processos finalizados."
 
 # ********************END WORKSITE**********************************
 
-Write-Log "Configurações desfeitas com sucesso."
+Write-Log "ConfiguraÃ§Ãµes desfeitas com sucesso."
